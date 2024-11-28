@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+        @apply bg-gray-50;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply px-4 py-2 rounded-md font-medium text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    }
+
+    .btn-primary {
+        @apply bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500;
+    }
+
+    .btn-secondary {
+        @apply bg-gray-500 text-white hover:bg-gray-600 focus:ring-gray-500;
+    }
+
+    .card {
+        @apply bg-white rounded-lg shadow-sm;
+    }
+
+    .card-header {
+        @apply px-6 py-4 border-b border-gray-200;
+    }
+
+    .card-body {
+        @apply p-6;
+    }
+}
+
+/* React PDF Viewer Styles */
+.rpv-core__viewer {
+    @apply w-full h-full;
+}
+
+.rpv-core__page-layer {
+    @apply bg-white shadow-md rounded-lg;
+}
+
+.rpv-core__spinner {
+    @apply border-t-2 border-blue-500;
+}
